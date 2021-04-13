@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/ed_cep"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/buscar"
+        app:layout_constraintEnd_toEndOf="@id/ed_cep"
+        app:layout_constraintStart_toStartOf="@id/ed_cep"
+        app:layout_constraintTop_toBottomOf="@id/ed_cep" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/response_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_buscar">
+
+
+        <TextView
+            android:id="@+id/tv_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="CEP"
+            app:layout_constraintBottom_toTopOf="@id/tv_logradouro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/tv_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGRADOURO"
+            app:layout_constraintBottom_toTopOf="@id/tv_complemento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_cep" />
+
+        <TextView
+            android:id="@+id/tv_complemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPLEMENTO"
+            app:layout_constraintBottom_toTopOf="@id/tv_bairro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_logradouro" />
+
+        <TextView
+            android:id="@+id/tv_bairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BAIRRO"
+            app:layout_constraintBottom_toTopOf="@id/tv_localidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_complemento" />
+
+        <TextView
+            android:id="@+id/tv_localidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCALIDADE"
+            app:layout_constraintBottom_toTopOf="@id/tv_uf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bairro" />
+
+        <TextView
+            android:id="@+id/tv_uf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="UF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_localidade" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
