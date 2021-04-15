@@ -1,5 +1,6 @@
-package com.ewerton.cep
+package com.ewerton.cep.network
 
+import com.ewerton.cep.model.Cep
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

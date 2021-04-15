@@ -1,4 +1,4 @@
-package com.ewerton.cep
+package com.ewerton.cep.model
 
 data class Cep(
     var cep: String,
