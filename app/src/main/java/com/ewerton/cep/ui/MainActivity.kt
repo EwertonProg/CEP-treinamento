@@ -20,13 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         btn_buscar.setOnClickListener {
             val cepDigitado = ed_cep.text.toString()
-            val liveData = viewModel.buscaCep(cepDigitado)
-
-            liveData.observe(this, Observer { cepRetornado ->
-                preencherCampos(cepRetornado)
-            })
+            viewModel.buscaCep(cepDigitado)
 
         }
+
+        viewModel.handle().observe(this, Observer { cepRetornado ->
+            preencherCampos(cepRetornado)
+        })
 
     }
 
